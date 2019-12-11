@@ -14,7 +14,7 @@ export class App extends Component {
   //Call weather data from darksky API
   componentDidMount() {
     Axios.get(
-      `/forecast/22af062ee7f2ed78fd2c208f8807e93c/${this.state.lat},${this.state.long}`
+      `/forecast/22af062ee7f2ed78fd2c208f8807e93c/43.1566,77.6088`
     ).then(res =>
       this.setState({
         weather: res.data.daily.data
