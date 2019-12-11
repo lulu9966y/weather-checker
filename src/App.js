@@ -14,7 +14,7 @@ export class App extends Component {
   //Call weather data from darksky API
   componentDidMount() {
     Axios.get(
-      `https://api.darksky.net/forecast/22af062ee7f2ed78fd2c208f8807e93c/${this.state.lat},${this.state.long}`
+      `/forecast/22af062ee7f2ed78fd2c208f8807e93c/${this.state.lat},${this.state.long}`
     ).then(res =>
       this.setState({
         weather: res.data.daily.data
@@ -27,7 +27,7 @@ export class App extends Component {
     console.log(city);
     if (city === "Rochester") {
       Axios.get(
-        "https://api.darksky.net/forecast/22af062ee7f2ed78fd2c208f8807e93c/43.1566,77.6088"
+        "/forecast/22af062ee7f2ed78fd2c208f8807e93c/43.1566,77.6088"
       ).then(res =>
         this.setState({
           weather: res.data.daily.data
@@ -40,7 +40,7 @@ export class App extends Component {
       // });
     } else if (city === "Albany") {
       Axios.get(
-        "https://api.darksky.net/forecast/22af062ee7f2ed78fd2c208f8807e93c/42.6526,73.7562"
+        "/forecast/22af062ee7f2ed78fd2c208f8807e93c/42.6526,73.7562"
       ).then(res =>
         this.setState({
           weather: res.data.daily.data
@@ -53,7 +53,7 @@ export class App extends Component {
       // });
     } else if (city === "Buffalo") {
       Axios.get(
-        "https://api.darksky.net/forecast/22af062ee7f2ed78fd2c208f8807e93c/42.8864,78.8784"
+        "/forecast/22af062ee7f2ed78fd2c208f8807e93c/42.8864,78.8784"
       ).then(res =>
         this.setState({
           weather: res.data.daily.data
@@ -66,7 +66,7 @@ export class App extends Component {
       // });
     } else if (city === "Syracuse") {
       Axios.get(
-        "https://api.darksky.net/forecast/22af062ee7f2ed78fd2c208f8807e93c/43.0481,76.1474"
+        "/forecast/22af062ee7f2ed78fd2c208f8807e93c/43.0481,76.1474"
       ).then(res =>
         this.setState({
           weather: res.data.daily.data
@@ -78,7 +78,7 @@ export class App extends Component {
       // });
     } else if (city === "NYC") {
       Axios.get(
-        "https://api.darksky.net/forecast/22af062ee7f2ed78fd2c208f8807e93c/40.7128,74.006"
+        "/forecast/22af062ee7f2ed78fd2c208f8807e93c/40.7128,74.006"
       ).then(res =>
         this.setState({
           weather: res.data.daily.data
